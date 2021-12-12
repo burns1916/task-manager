@@ -1,8 +1,8 @@
-const Tasks = ({ tasks, deleteTask }) => {
+const Tasks = ({ tasks, deleteTask, onToggle }) => {
     return(
     <>
         {tasks.map((task) => 
-            <div key={task.id}>
+            <div className={`task ${task.reminder ? 'reminder' : ''}`} key={task.id} onDoubleClick={() => onToggle(task.id)}>
                 <li>
                     {task.name} <input type="button" value="X" onClick={() => {deleteTask(task.id)}}  />
                     <br />

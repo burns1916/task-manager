@@ -1,4 +1,10 @@
 {
   "tasks": [
+    {
+      "name": "new task",
+      "date": "today",
+      "reminder": true,
+      "id": 1
+    }
   ]
 }
